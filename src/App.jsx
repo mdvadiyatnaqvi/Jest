@@ -1,8 +1,11 @@
 import React from 'react'
+import Input from "./Input"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Input />
+    </>
   )
 }
 
