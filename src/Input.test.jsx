@@ -8,6 +8,7 @@ describe('Input Component', () => {
         const input = screen.getByTitle('username');
         let checkPlaceholder = screen.getByPlaceholderText("Enter Username...")
         expect(input).toBeInTheDocument();
+        expect(checkPlaceholder).toBeInTheDocument();
         expect(input).toHaveAttribute('type', 'text');
     });
 });
