@@ -11,4 +11,12 @@ describe('Input Component', () => {
         expect(checkPlaceholder).toBeInTheDocument();
         expect(input).toHaveAttribute('type', 'text');
     });
+
+    test('testing onChange() event', () => {
+        render(<Input />)
+        let input = screen.getByRole("textbox");
+        expect(input).toBeInTheDocument();
+        fireEvent.change(input, { target: { value: "a" } })
+        expect(input.value).toBe("a")
+    })
 });
