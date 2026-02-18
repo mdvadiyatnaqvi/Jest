@@ -15,7 +15,7 @@ const Input = () => {
                 type="text"
                 value={value}
                 onChange={handleChange}
-                placeholder="Enter username"
+                placeholder="Enter Username..."
                 data-testid="username-input"
                 title="username"
             />

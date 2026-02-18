@@ -6,8 +6,8 @@ describe('Input Component', () => {
     test('renders input element with correct attributes', () => {
         render(<Input />);
         const input = screen.getByTitle('username');
+        let checkPlaceholder = screen.getByPlaceholderText("Enter Username...")
         expect(input).toBeInTheDocument();
         expect(input).toHaveAttribute('type', 'text');
-        expect(input).toHaveAttribute('placeholder', 'Enter username');
     });
 });
