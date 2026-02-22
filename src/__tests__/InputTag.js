@@ -33,6 +33,15 @@ describe('Input Component', () => {
 // afterAll(() => {
 //     console.log("After all run");
 // })
-afterEach(() => {
-    console.log("After each run");
+// afterEach(() => {
+//     console.log("After each run");
+// })
+
+// snapshot testing below
+
+describe("Snapshot testing", () => {
+    test("taking the snap of the input tag for testing", () => {
+        const container = render(<Input />);
+        expect(container).toMatchSnapshot();
+    })
 })
