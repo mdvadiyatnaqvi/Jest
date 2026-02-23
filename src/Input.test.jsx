@@ -19,4 +19,11 @@ describe('Input Component', () => {
         fireEvent.change(input, { target: { value: "a" } })
         expect(input.value).toBe("a")
     })
+
+    test("testing the functional component method", () => {
+        render(<Input />);
+        const btn = screen.getByTestId("updated-btn")
+        fireEvent.click(btn)
+        expect(screen.getByText("Updated Successfully!!!")).toBeInTheDocument();
+    })
 });
